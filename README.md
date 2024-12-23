@@ -25,3 +25,6 @@ services:
 -container_name #Specify the container name
 
 -vip #keepalived virtual ip
+
+
+prom/dashboards-keepalived-exporter.json is grafana templates
