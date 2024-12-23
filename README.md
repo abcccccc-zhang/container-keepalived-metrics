@@ -1,3 +1,18 @@
+Running
+--------------1------------
+```
+git clone
+update docker-compose.yaml
+docker compose up -d
+```
+--------------2------------
+```
+go build -o keepalived_metrics ./main.go
+./keepalived_metrics -h
+```
+
+
+
 # docker-keppalived-metrics
 About container keepalived export metrics to Prometheus
 
