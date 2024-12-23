@@ -16,7 +16,7 @@ go build -o keepalived_metrics ./main.go
 # docker-keppalived-metrics
 About container keepalived export metrics to Prometheus
 
-Exposure Metrics RestartCount ContainerStatus VipFound VipChangeCount 
+Exposure metrics: RestartCount ContainerStatus VipFound VipChangeCount 
 
 Container status and restart count, vip found and vip change count.
 
