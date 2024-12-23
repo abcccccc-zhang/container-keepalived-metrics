@@ -1,0 +1,12 @@
+groups:
+  - name: vip_alerts
+    rules:
+    - alert: VIPChangeAlert
+      expr: increase(vip_change_count[2m]) > 0
+      for: 10s
+      labels:
+        severity: critical
+      annotations:
+        description: "VIP address has changed."
+        summary: "VIP address change detected. Check if the VIP migration was successful."
+        vip_address: "{{ $labels.vip_res }}"

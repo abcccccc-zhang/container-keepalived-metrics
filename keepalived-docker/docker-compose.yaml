@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  keepalived-master:
+    image: osixia/keepalived:stable
+    container_name: keepalived-master
+    privileged: true
+    restart: always
+    network_mode: host
+      #environment:
+      #      - ng_port=${NGINX_PORT}
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "1"
+    volumes:
+      - ./keepalived.conf:/container/service/keepalived/assets/keepalived.conf
+        #  - ./check-nginx-port.sh:/checksh/check-nginx-port.sh
+      - /etc/localtime:/etc/localtime:ro
+    command: --copy-service
